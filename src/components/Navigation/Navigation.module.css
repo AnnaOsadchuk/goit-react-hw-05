@@ -1,0 +1,12 @@
+.link {
+  display: inline-flex;
+  text-decoration: none;
+  margin-left: 8px;
+}
+.link:hover {
+  color: orangered;
+}
+.active {
+  background-color: teal;
+  color: #fff;
+}
