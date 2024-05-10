@@ -8,7 +8,6 @@ import Navigation from "./components/Navigation/Navigation";
 export default function App() {
   return (
     <div>
-      <h1>Films</h1>
       <Navigation />
 
       <Routes>
