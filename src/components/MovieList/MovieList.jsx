@@ -5,7 +5,7 @@ export default function MovieList({ items }) {
   const location = useLocation();
   return (
     <ul className={css.list}>
-      {items.map((id, title, poster_path, release_date) => (
+      {items.map((id, title, poster_path, vote_average) => (
         <li className={css.item} key={id}>
           <NavLink className={css.link} to={`/movies/${id}`} state={location}>
             <img
@@ -15,7 +15,7 @@ export default function MovieList({ items }) {
               width="200"
             />
             <p className={css.title}>{title}</p>
-            <p className={css.release}>{release_date}</p>
+            <p className={css.release}> Rating: {vote_average}</p>
           </NavLink>
         </li>
       ))}

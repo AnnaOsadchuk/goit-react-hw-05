@@ -1,23 +1,34 @@
 import { useEffect, useState } from "react";
 import { getTrendingMovies } from "../../movies-api";
 import MovieList from "../../components/MovieList/MovieList";
+import ErrorMassage from "../../components/ErrorMessage/ErrorMessage";
+import Loader from "../../components/Loader/Loader";
 
 export default function HomePage() {
-  /*  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false); */
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
-    async function getMovies() {
-      const data = await getTrendingMovies();
-      setFilms(data);
-    }
-    getMovies();
+    const getFilms = async () => {
+      try {
+        setLoading(true);
+        const newFilm = await getTrendingMovies();
+        setFilms(newFilm);
+      } catch (error) {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getFilms();
   }, []);
 
   return (
     <div>
       <h1>Home page</h1>
+      {loading && <Loader />}
+      {error && <ErrorMassage />}
       {films.length > 0 && <MovieList items={films} />}
     </div>
   );
