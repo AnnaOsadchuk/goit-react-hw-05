@@ -4,9 +4,8 @@
   margin-left: 8px;
 }
 .link:hover {
-  color: orangered;
+  color: blueviolet;
 }
 .active {
-  background-color: teal;
-  color: #fff;
+  color: orangered;
 }

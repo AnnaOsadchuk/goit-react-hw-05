@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
+  margin-left: 30px;
 }
 
 .title {
@@ -9,7 +10,7 @@
   color: black;
   text-align: center;
 }
-.release {
+.rating {
   font-size: 8px;
   color: black;
   text-align: center;

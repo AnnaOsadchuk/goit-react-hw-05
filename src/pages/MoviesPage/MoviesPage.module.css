@@ -1,0 +1,29 @@
+.container {
+  width: auto;
+  height: 50px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.input {
+  border-radius: 2px;
+  border: solid 2px rgb(81, 88, 212);
+  width: 300px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 2px;
+  border: solid 2px rgb(81, 88, 212);
+}

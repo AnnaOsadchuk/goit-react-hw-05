@@ -5,7 +5,7 @@ import ErrorMassage from "../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../components/Loader/Loader";
 
 export default function HomePage() {
-  const [loading, setLoading] = useState(false);
+  const [loader, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [films, setFilms] = useState([]);
 
@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <div>
       <h1>Home page</h1>
-      {loading && <Loader />}
+      {loader && <Loader />}
       {error && <ErrorMassage />}
       {films.length > 0 && <MovieList items={films} />}
     </div>
