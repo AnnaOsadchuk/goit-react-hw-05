@@ -17,7 +17,10 @@ export default function MovieList({ items }) {
                 width="200"
               />
               <p className={css.title}>{title}</p>
-              <p className={css.rating}> Rating: {vote_average.toFixed(1)}</p>
+              <p className={css.rating}>
+                {" "}
+                Rating: {vote_average && vote_average.toFixed(1)}
+              </p>
             </NavLink>
           </li>
         ))}

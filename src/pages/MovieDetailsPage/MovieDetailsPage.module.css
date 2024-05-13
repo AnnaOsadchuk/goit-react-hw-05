@@ -1,0 +1,36 @@
+.link {
+  font-size: 20px;
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.wrapper {
+  display: flex;
+  margin-top: 20px;
+}
+.img {
+  margin-right: 50px;
+}
+.genres {
+  display: flex;
+}
+.genresList {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.text {
+  font-weight: 700;
+}
+.navLink {
+  font-size: 20px;
+  color: black;
+}
+.navLink:hover,
+.navLink:focus {
+  color: orangered;
+}
