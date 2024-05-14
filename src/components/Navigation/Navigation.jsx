@@ -15,9 +15,6 @@ export default function HomePage() {
       <NavLink to="/movies" className={getNavLink}>
         Movies
       </NavLink>
-      <NavLink to="/movie/{movie_id}" className={getNavLink}>
-        Movies
-      </NavLink>
     </nav>
   );
 }

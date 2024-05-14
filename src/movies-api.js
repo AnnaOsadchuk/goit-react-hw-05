@@ -53,7 +53,7 @@ export const getCredits = async (movie_id) => {
       movie_id,
     },
   });
-  return response.data.results;
+  return response.data.cast;
 };
 
 export const getReviews = async (movie_id) => {

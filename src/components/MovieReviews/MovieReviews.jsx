@@ -16,8 +16,7 @@ export default function MovieCast() {
       try {
         setLoading(true);
         const newReviews = await getReviews(movieId);
-        console.log(newReviews);
-        /*   setReviews(newReviews.cast); */
+        setReviews(newReviews);
       } catch (error) {
         setError(true);
       } finally {

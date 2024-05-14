@@ -17,8 +17,7 @@ export default function MovieCast() {
       try {
         setLoading(true);
         const newCast = await getCredits(movieId);
-        /* setCast(newCast); */
-        setCast(newCast.cast);
+        setCast(newCast);
       } catch (error) {
         setError(true);
       } finally {
