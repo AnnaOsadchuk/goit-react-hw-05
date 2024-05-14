@@ -1,11 +1,19 @@
+.container {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px #8e8cc9;
+  overflow: hidden;
+}
 .link {
+  font-size: 26px;
   display: inline-flex;
   text-decoration: none;
-  margin-left: 8px;
+  margin-left: 30px;
 }
 .link:hover {
-  color: blueviolet;
+  color: rgb(179, 73, 41);
 }
 .active {
-  color: orangered;
+  color: rgb(64, 50, 171);
 }

@@ -8,7 +8,7 @@ const getNavLink = ({ isActive }) => {
 
 export default function HomePage() {
   return (
-    <nav>
+    <nav className={css.container}>
       <NavLink to="/" className={getNavLink}>
         Home
       </NavLink>

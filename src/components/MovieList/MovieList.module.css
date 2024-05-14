@@ -1,10 +1,9 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   margin-left: 30px;
 }
-
 .title {
   font-size: 12px;
   color: black;
@@ -17,4 +16,22 @@
 }
 .link {
   text-decoration: none;
+}
+.item {
+  max-width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px #8e8cc9;
+  overflow: hidden;
+}
+
+.title,
+.rating {
+  text-align: center;
+  width: 100%;
+  white-space: normal;
+  padding: 5px;
+}
+.rating {
+  font-size: 12px;
+  color: red;
 }
