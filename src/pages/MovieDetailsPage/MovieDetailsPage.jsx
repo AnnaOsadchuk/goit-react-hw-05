@@ -39,7 +39,9 @@ export default function MovieDetailsPage() {
       {details && (
         <div className={css.container}>
           <NavLink className={css.link} to={goBackLink.current}>
-            Go back
+            <button className={css.btn} type="button">
+              Go back
+            </button>
           </NavLink>
           <div className={css.wrapper}>
             <img

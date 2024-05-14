@@ -17,25 +17,36 @@ export default function MoviesPage() {
   const [page, setPage] = useState(1);
   const [notFoundError, setNotFoundError] = useState(false);
 
+  const getFilms = async () => {
+    try {
+      setError(false);
+      setLoading(true);
+      setNotFoundError(false);
+      const films = await getSearchMovie();
+      setFilms(films);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    const getFilms = async () => {
-      try {
-        setError(false);
-        setLoading(true);
-        setNotFoundError(false);
-        const newFilm = await getSearchMovie();
-        setFilms(newFilm);
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-    getFilms();
+    const savedFilms = localStorage.getItem("films");
+    if (savedFilms) {
+      setFilms(JSON.parse(savedFilms));
+    } else {
+      getFilms();
+    }
   }, []);
 
+  useEffect(() => {
+    if (films.length > 0) {
+      localStorage.setItem("films", JSON.stringify(films));
+    }
+  }, [films]);
+
   const handleSubmit = async (values, actions) => {
-    setFilms([]);
     setPage(1);
     if (!values.queryMovie) {
       toast.error("Please, enter your request!");
@@ -79,7 +90,7 @@ export default function MoviesPage() {
       <div>
         {films.length > 0 && <MovieList items={films} />}
         {films.length > 0 && !loader && (
-          <LoadMoreBtn onClick={handleLoadMore} />
+          <LoadMoreBtn onClick={handleLoadMore} page={page} />
         )}
       </div>
     </div>
