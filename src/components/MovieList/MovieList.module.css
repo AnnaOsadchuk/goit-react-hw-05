@@ -5,12 +5,12 @@
   margin-left: 30px;
 }
 .title {
-  font-size: 12px;
+  font-size: 16px;
   color: black;
   text-align: center;
 }
 .rating {
-  font-size: 8px;
+  font-size: 12px;
   color: black;
   text-align: center;
 }
@@ -19,6 +19,7 @@
 }
 .item {
   max-width: 200px;
+  max-height: 400px;
   border: 1px solid #ccc;
   box-shadow: 0px 0px 10px #8e8cc9;
   overflow: hidden;
@@ -30,6 +31,7 @@
   width: 100%;
   white-space: normal;
   padding: 5px;
+  margin: 0px;
 }
 .rating {
   font-size: 12px;
